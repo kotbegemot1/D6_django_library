@@ -38,12 +38,6 @@ SECRET_KEY. Это большое случайное число, применя�
       with open('/etc/secret_key.txt') as f:
       SECRET_KEY = f.read().strip()
       ```
-      ```
-      # SECURITY WARNING: keep the secret key used in production secret!
-      # SECRET_KEY = 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag'
-      import os
-      SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
-      ```
 Далее нужно изменить приложение p_library таким образом, чтобы читать SECRET_KEY и DEBUG из переменных окружения, если те определены, 
 иначе использовать значения по умолчанию.
 
