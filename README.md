@@ -18,8 +18,10 @@
       git init
       git clone git@github.com:kotbegemot1/D5_django_library.git
       ```
-      
-## Развернуть проект на Heroku
+После того как запустите проект через сервер на своём компьютере нужно сделать `python3 manage.py makemigrations p_library` и
+`python3 manage.py collectstatic`
+   
+# Развернуть проект на Heroku
 
 ### Критически важные настройки файла settings.py:
 DEBUG. При развертывании сайта должен быть установлен в False (DEBUG = False). Тем самым, прекратится вывод  важной отладочной информации.
